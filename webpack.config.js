@@ -4,9 +4,9 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = {
     //точка входа
     entry: {
-        main: path.resolve(__dirname, 'src', 'index.js'),
+        main: path.resolve(__dirname, 'src', 'main.js'),
         login: path.resolve(__dirname, 'src', 'login.js'),
-
+        operator: path.resolve(__dirname, 'src', 'operator.js'),
     },
     //папка куда собирается
     output: {
@@ -65,6 +65,7 @@ module.exports = {
     },
     devServer: {
         contentBase: path.resolve(__dirname, 'dist'),
+        historyApiFallback: true,
     },
     plugins: [
         new ExtractTextPlugin({

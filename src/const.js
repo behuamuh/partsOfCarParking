@@ -1,0 +1,1 @@
+export const URL_CAR_CHECK = 'http://jsonplaceholder.typicode.com/users';
